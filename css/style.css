@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor_grid {
+    display: grid;
+    grid-row-gap: 15px;
+
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 10vh 60vh 10vh 10vh;
+    grid-template-areas:    "encabezado      encabezado"
+                            "principal       principal"
+                            "no_principal    no_principal"
+                            "pie_de_pagina   pie_de_pagina";
+}
+
+/*encabezado*/
+.encabezado {
+    
+    grid-area: encabezado;
+    display: flex;
+}
+header img{
+    width: 100px;
+}
+
+
+
+.principal {
+    background-color: green;
+    grid-area: principal;
+}
+
+.no_principal {
+    background-color: blueviolet;
+    grid-area: no_principal;
+}
+
+/* Pie de pagina*/
+.pie_de_pagina {
+    background-color: pink;
+    grid-area: pie_de_pagina;
+}
+
+.fa-whatsapp {
+    color: rgb(58, 131, 58);
+}
+
+.fa-facebook {
+    color: rgb(35, 35, 219);
+}
+
+.fa-instagram {
+    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+    color: #f09433;
+    color: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+    ;
+}
