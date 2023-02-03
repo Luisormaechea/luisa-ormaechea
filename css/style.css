@@ -4,12 +4,15 @@
     box-sizing: border-box;
 }
 
+body{
+    background-image: url(../asset/fondo.jpg);
+}
 .contenedor_grid {
     display: grid;
     grid-row-gap: 15px;
 
     grid-template-columns: 20% 80%;
-    grid-template-rows: 10vh 60vh 10vh 10vh;
+    grid-template-rows: 10vh 60vh 50vh 10vh;
     grid-template-areas:    "encabezado      encabezado"
                             "principal       principal"
                             "no_principal    no_principal"
@@ -18,41 +21,84 @@
 
 /*encabezado*/
 .encabezado {
-    
+
     grid-area: encabezado;
     display: flex;
+
 }
-header img{
+
+header img {
     width: 100px;
+    display: flex;
+
 }
 
 
-
+/*PROMOCION DEL DIA*/
 .principal {
-    background-color: green;
     grid-area: principal;
 }
 
+main h1 {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+
+}
+
+.promo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+.promo div {
+    text-align: center;
+    color: black;
+}
+
+.promo div img {
+    width: 50%;
+
+}
+
+/*NO PRINCIPAL*/
 .no_principal {
-    background-color: blueviolet;
+    
     grid-area: no_principal;
 }
 
+.carousel {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(470px)
+}
+
+
 /* Pie de pagina*/
 .pie_de_pagina {
-    background-color: pink;
+    
     grid-area: pie_de_pagina;
+    justify-content: flex-end;
 }
 
 .fa-whatsapp {
     color: rgb(58, 131, 58);
+    text-decoration: none;
+
+
 }
 
 .fa-facebook {
     color: rgb(35, 35, 219);
+    text-decoration: none;
+
 }
 
 .fa-instagram {
+    text-decoration: none;
     background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
     color: #f09433;
     color: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
@@ -60,4 +106,55 @@ header img{
     color: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
     ;
+}
+
+.redes_sociales {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 1024px) {
+    .contenedor_grid {
+        display: grid;
+        grid-row-gap: 15px;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 20vh 60vh 20vh;
+        grid-template-areas:   "encabezado"
+                                "principal"
+                                "pie_de_pagina";
+    }
+
+    .redes_sociales {
+        display: flex;
+        justify-content: center;
+    }
+
+    .promo {
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main h1 {
+        text-align: center;
+        font-family: 'Inter', sans-serif;
+
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .contenedor_grid {
+        display: grid;
+        grid-row-gap: 15px;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 20vh 60vh 20vh;
+        grid-template-areas:    "encabezado"
+                                "principal"
+                                "pie_de_pagina";
+    }
+
 }

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
-    <!--CDN FONTAWeSOME-->
+    <!--CDN FONTAWESOME-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -21,9 +21,10 @@
 <body>
     <div class="contenedor_grid">
         <header class="encabezado">
-                <img src="./asset/logo.png" alt="logo bar">
+            <img src="./asset/logo.png" alt="logo bar">
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
+                    <a class="navbar-brand" href="./index.html">Inicio</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                         aria-label="Toggle navigation">
@@ -40,23 +41,59 @@
                     </div>
                 </div>
             </nav>
-
         </header>
         <main class="principal">
-            <h1>TITULO</h1>
+            <h1>BRUGGE BAR & BIERGARTEN</h1>
+            <section class="promo">
+                <div>
+                    <h5>MEDIO DIA</h5>
+                    <img src="./asset/Imagenes.comida/meidodia.jpg" alt="">
+                </div>
 
-            <section style="background-color: green;"></section>
-            no principal
+                <div>
+                    <h5>NOCHE</h5>
+                    <img src="./asset/Imagenes.comida/cena.jpg" alt="">
+                </div>
+
+            </section>
+
         </main>
         <section class="no_principal">
-            foto del barl
+            <!--Carrusel Bootstap-->
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./asset/bar/interior.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./asset/bar/patio.jpg" class="d-block w-100" alt="...">
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </section>
         <footer class="pie_de_pagina">
-            <div class="redes_socicales">
-            <i class="fa-brands fa-whatsapp fa-2x"></i>
-            <i class="fa-brands fa-facebook fa-2x"></i>
-            <i class="fa-brands fa-instagram fa-2x"></i>
-        </div>
+            <div class="redes_sociales">
+                <a class="fa-brands fa-whatsapp fa-2x" href="https://web.whatsapp.com/" target="_blank"></a>
+                <a class="fa-brands fa-facebook fa-2x" href="https://www.facebook.com/" target="_blank"></a>
+                <a class="fa-brands fa-instagram fa-2x" href="https://www.instagram.com/" target="_blank"></a>
+            </div>
         </footer>
     </div>
     <!--Script Bootstarp-->
